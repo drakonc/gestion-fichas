@@ -56,4 +56,8 @@ export class GestionAspiranteService {
         return this._apiService.post<FormData,any>(APIs.paciente.uploadFailManual, body);
     }
 
+    uploadCisignFicha(body: FormData) {
+      return this._apiService.post<FormData,any>(APIs.paciente.uploadCisignManual, body);
+  }
+
 }

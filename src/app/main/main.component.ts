@@ -23,6 +23,7 @@ import { GestionAspiranteService } from '../core/services/gestion-aspirante.serv
 import { Aspirante } from '../core/models/aspirante';
 import { SexoCompletoPipe,FechaSimplePipe } from '../core/pipes';
 import { TipoFicha } from '../core/models/tipo_ficha';
+import { AdjuntarCisignComponent } from './modal/adjuntar-cisign/adjuntar-cisign.component';
 
 
 @Component({
@@ -87,6 +88,15 @@ export class MainComponent implements OnInit {
     const tipoFicha = this.gestionAspirante.tipoFicha.find((x: TipoFicha) => x.nombre === especialdad);
 		this.ref = this.dialogService.open(CargeFormulariosComponent, {
 			header: `Cargar formulario ${especialdad}`,
+			width: '40vw',
+			data: tipoFicha
+		});
+	}
+
+  showCargarCisign(especialdad: string) {
+    const tipoFicha = this.gestionAspirante.tipoFicha.find((x: TipoFicha) => x.nombre === especialdad);
+		this.ref = this.dialogService.open(AdjuntarCisignComponent, {
+			header: `Cargar consentimiento ${especialdad}`,
 			width: '40vw',
 			data: tipoFicha
 		});

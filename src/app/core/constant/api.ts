@@ -24,6 +24,7 @@ export class APIs {
     getDatosAspirante: `${environment.apiFuerzaArmada}/api/v1/usuario/GetDataAspirantePorDocumento`,
     saveDocumentosAspirante: `${environment.apiFuerzaArmada}/api/v1/aspirante/SaveDocumentosPaciente`,
     uploadFailManual: `${environment.apiFuerzaArmada}/api/v1/fichas/UploadManualFile`,
+    uploadCisignManual: `${environment.apiFuerzaArmada}/api/v1/fichas/SaveConsentimientoFicha`,
   }
 
   static ficha = {
